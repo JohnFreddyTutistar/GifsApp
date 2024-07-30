@@ -1,0 +1,23 @@
+<div class="bg-dark border-right p-3 center-xs" id="sidebar">
+    
+    <h6 class="text-white text-center">Historial de busqueda</h6>
+    <button 
+        *ngIf="!(tags.length === 0)"
+        data-toggle="tooltip" 
+        data-placement="top" 
+        title="Borrar historial"
+        class="btn btn-outline-danger mb-2 position-end" 
+        (click)="clearHistory()">
+        <!-- <i class="bi bi-trash3"></i> -->
+         Borrar historial
+    </button>
+
+    <div class="list-group list-reset">
+        <button 
+            *ngFor="let tag of tags; let i = index" 
+            class="list-group-item list-group-item-action m-1"
+            (click)="searchTagInHistory(tag)">
+            {{ tag | titlecase }}
+        </button>
+    </div>
+</div>

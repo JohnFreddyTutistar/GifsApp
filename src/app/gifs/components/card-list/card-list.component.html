@@ -1,0 +1,11 @@
+<div class="row">
+    <gifs-card
+        [gif]="gif"
+        class="col-md-3 col-sm-6"
+        *ngFor="let gif of gifs">
+    </gifs-card>
+
+    <div *ngIf="gifs.length === 0" class="col text-center">
+        <img src="assets/images/no_data.jpg" alt="" width="700">
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="text-center card mb-2 bg-dark">
+    <!-- TODO: crear imagen -->
+
+    <!-- <img [src]="gif.images.fixed_height.url" [alt]="gif.title" class="card-img-top"> -->
+     <shared-lazy-image [url]="gif.images.fixed_height.url" [alt]="gif.title || 'No name'"></shared-lazy-image>
+
+     <div class="card-body text-white">
+        <p class="card-text">{{ gif.title || 'no title' }}</p>
+     </div>
+</div>
